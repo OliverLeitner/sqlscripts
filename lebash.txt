@@ -1,0 +1,1 @@
+redis-cli --csv lrange mylist 0 -1 | awk '{split($0,a,","); printf "%s{\"key\": %s}","",a[1];}'
